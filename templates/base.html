@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books shelf - {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div>
+        <strong>Books shelf</strong>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/books/list">Books</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">Add book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+    </div>
+    <hr>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
+

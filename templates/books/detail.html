@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Book: {{ book.title }}
+{% endblock %}
+
+{% block content %}
+  <h2>{{ book.title }}</h2>
+  <span>{{ book.creator }}</span>
+  <p>Author: {{ book.author }}</p>
+  <div>
+    <a href="/books/list">Back to list</a>
+  </div>
+{% endblock %}
