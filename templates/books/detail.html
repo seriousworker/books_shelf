@@ -9,8 +9,8 @@
   <span>{{ book.creator }}</span>
   <p>Author: {{ book.author }}</p>
   <div>
-    <a href="/books/list">Back to list</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="/books/update/{{ book.id }}">Edit book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="/books/delete/{{ book.id }}">Delete book</a>
+    <a href="{{ url_for('list_books') }}">Back to list</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="{{ url_for('edit_book', book_id=book.id)}}">Edit book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="{{ url_for('delete_book', book_id=book.id) }}">Delete book</a>
   </div>
 {% endblock %}

@@ -5,6 +5,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import redirect
+from flask import url_for
 
 
 app = Flask(__name__)
@@ -52,7 +53,7 @@ def create_book():
             conn.execute('INSERT INTO books (title, author) VALUES (?, ?);', (title, author))
             conn.commit()
             conn.close()
-            return redirect('/books/list')
+            return redirect(url_for('list_books'))
 
     return render_template('books/create.html')
 
@@ -71,7 +72,7 @@ def edit_book(book_id):
             conn.execute('UPDATE books SET title = ?, author = ? WHERE id = ?;', (title, author, book_id))
             conn.commit()
             conn.close()
-            return redirect('/books/list')
+            return redirect(url_for('list_books'))
 
     return render_template('books/edit.html', book=book)
 
@@ -87,7 +88,7 @@ def delete_book(book_id):
         conn.execute('DELETE FROM books WHERE id = ?;', (book_id,))
         conn.commit()
         conn.close()
-        return redirect('/books/list')
+        return redirect(url_for('list_books'))
 
     return render_template('books/delete.html', book=book)
 

@@ -7,9 +7,9 @@
 <body>
     <div>
         <strong>Books shelf</strong>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/books/list">Books</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="/books/create">Add book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('index') }}">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('list_books') }}">Books</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('create_book') }}">Add book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     <hr>
     {% block content %}
