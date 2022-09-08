@@ -9,6 +9,8 @@
   <span>{{ book.creator }}</span>
   <p>Author: {{ book.author }}</p>
   <div>
-    <a href="/books/list">Back to list</a>
+    <a href="/books/list">Back to list</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="/books/update/{{ book.id }}">Edit book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="/books/delete/{{ book.id }}">Delete book</a>
   </div>
 {% endblock %}
