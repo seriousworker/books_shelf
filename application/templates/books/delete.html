@@ -6,9 +6,10 @@
 
 {% block content %}
     <h1>Delete book</h1>
-    <h2>Do you want to delete {{ book['title'] }}?</h2>
+    <h2>Do you want to delete {{ book.title }}?</h2>
     <form method="post">
-        <button type="submit">Delete</button>
+        {{ form.hidden_tag() }}
         <a href="{{ url_for('detail_book', book_id=book.id) }}">Cancel</a>
+        {{ form.submit() }}
     </form>
 {% endblock %}
